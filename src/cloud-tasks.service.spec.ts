@@ -11,7 +11,7 @@ describe('CloudTasksService', () => {
   let service: CloudTasksService;
 
   beforeEach(async () => {
-    let taskClientMock = jest
+    const taskClientMock = jest
       .fn<Partial<CloudTasksClient>, any>()
       .mockImplementation(() => ({
         createTask: jest

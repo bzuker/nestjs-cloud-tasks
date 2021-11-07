@@ -22,6 +22,10 @@
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
+  "precommit": [
+    "lint:ci",
+    "test:cov"
+  ],
   "keywords": [
     "nestjs"
   ],
@@ -52,6 +56,7 @@
     "@types/node": "16.11.6",
     "@types/supertest": "2.0.11",
     "jest": "27.3.1",
+    "pre-commit": "^1.2.2",
     "prettier": "2.4.1",
     "reflect-metadata": "^0.1.13",
     "supertest": "6.1.6",
