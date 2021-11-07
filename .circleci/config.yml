@@ -30,9 +30,6 @@ jobs:
       - run:
           name: Run Tests
           command: npm run test:cov
-      - run:
-          name: Run Build
-          command: npm run build
 
 workflows:
   test-workflow:
