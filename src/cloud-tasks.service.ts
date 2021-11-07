@@ -19,6 +19,10 @@ export class CloudTasksService {
     @InjectCloudTasksClient() private readonly client: CloudTasksClient,
   ) {}
 
+  getClient() {
+    return this.client;
+  }
+
   async createTask<PayloadType = any>(
     taskOptions: CreateTaskOptions<PayloadType> = { httpMethod: 'POST' },
   ) {
@@ -33,11 +37,17 @@ export class CloudTasksService {
     return response.name;
   }
 
-  async listQueues() {}
+  async listQueues() {
+    throw new Error('Method not implemented.');
+  }
 
-  async deleteQueue() {}
+  async deleteQueue() {
+    throw new Error('Method not implemented.');
+  }
 
-  async createQueue() {}
+  async createQueue() {
+    throw new Error('Method not implemented.');
+  }
 
   private createTaskInternal<PayloadType = any>(
     taskOptions: ScheduleTaskOptions<PayloadType>,
@@ -46,6 +56,7 @@ export class CloudTasksService {
       this.config,
       taskOptions,
     );
+
     const parent = this.client.queuePath(projectId, location, queue);
     const task = this.buildTask<PayloadType>(taskOptions);
 

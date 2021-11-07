@@ -1,8 +1,6 @@
 import { protos } from '@google-cloud/tasks';
 import { ClientOptions } from 'google-gax';
 
-export interface CloudTasks {}
-
 export interface CloudTasksConfig extends ClientOptions, QueueParams {
   url?: string;
   serviceAccountEmail?: string;
