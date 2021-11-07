@@ -14,6 +14,8 @@
   </a>
 </div>
 
+[![Coverage Status](https://coveralls.io/repos/github/bzuker/nestjs-cloud-tasks/badge.svg)](https://coveralls.io/github/bzuker/nestjs-cloud-tasks)
+
 ### Installation
 
 1. Clone the repo
